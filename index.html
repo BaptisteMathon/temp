@@ -1,67 +1,110 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-    body
-    {
-        background-color: #0C0032;
-        margin: 0;
-        padding: 0;
-    }
-    #clockdiv{
-        display: flex;
-        color: #3500D3;
-        font-family: sans-serif;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 700%;
-        box-shadow: 0 0 15px 15px #190061;
-        padding: 0 15px;
-    }
-    span
-    {
-        padding: 0 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333;
+            color: #fff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+        }
+        a{
+            display: inline-block;
+            padding: 10px;
+            background-color: #6c63ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .tel
+        {
+            font-size: 1.5em;
+            margin-top: -15px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4c46b6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .instagram {
+            background-image: url('instagram.webp');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
+        .twitter {
+            background-image: url('twitter.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
+        .snapchat {
+            background-image: url('snapchat.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
+        .linkedin {
+            background-image: url('linkedin.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
+        .discord {
+            background-image: url('discord.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
+    </style>
 </head>
 <body>
-    <div id="clockdiv">
-        <span id="day"></span>
-        <span>:</span>
-        <span id="hour"></span>
-        <span>:</span>
-        <span id="minute"></span>
-        <span>:</span>
-        <span id="second"></span>
-    </div>
-
-  
-<script>
-  
-var deadline = new Date("sep 06, 2023 00:00:00").getTime();
-  
-var x = setInterval(function() {
-  
-var now = new Date().getTime();
-var t = deadline - now;
-var days = Math.floor(t / (1000 * 60 * 60 * 24));
-var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
-var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((t % (1000 * 60)) / 1000);
-document.getElementById("day").innerHTML =days ;
-document.getElementById("hour").innerHTML =hours;
-document.getElementById("minute").innerHTML = minutes; 
-document.getElementById("second").innerHTML =seconds; 
-if (t < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "TIME UP";
-        document.getElementById("day").innerHTML ='0';
-        document.getElementById("hour").innerHTML ='0';
-        document.getElementById("minute").innerHTML ='0' ; 
-        document.getElementById("second").innerHTML = '0'; }
-}, 1000);
-</script>
+    <ul>
+        <li><a class="instagram" href="https://www.instagram.com/bapt.mtn/">Instagram</a></li>
+        <li><a class="twitter" href="https://twitter.com/LiloPtn">Twitter</a></li>
+        <li><a class="snapchat" href="https://www.snapchat.com/add/baptistee_m?share_id=1tXdd31_9mU&locale=fr-FR">Snapchat</a></li>
+        <li><a class="linkedin" href="https://www.linkedin.com/in/baptiste-mathon-3301a2233/">LinkedIn</a></li>
+        <li><a class="discord" onclick="DISC()" id="discord">Discord</a></li>
+        <li style="opacity: 0;"><a href="tel:VOTRE_NUMERO_DE_TELEPHONE">VOTRE_NUMERO_DE_TELEPHONE</a></li>
+        <li class="tel">07.83.64.89.09</li>
+    </ul>
 </body>
+
+<script>
+    function DISC(){
+        document.getElementById("discord").innerHTML = "liloptn";
+    }
+</script>
+
 </html>
