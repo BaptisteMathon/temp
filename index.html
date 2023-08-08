@@ -87,6 +87,14 @@
             padding-left: 40px;
             width: 40%;
         }
+        .mail {
+            background-image: url('mail.avif');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+            width: 40%;
+        }
     </style>
 </head>
 <body>
@@ -96,6 +104,7 @@
         <li><a class="snapchat" href="https://www.snapchat.com/add/baptistee_m?share_id=1tXdd31_9mU&locale=fr-FR">Snapchat</a></li>
         <li><a class="linkedin" href="https://www.linkedin.com/in/baptiste-mathon-3301a2233/">LinkedIn</a></li>
         <li><a class="discord" onclick="DISC()" id="discord">Discord</a></li>
+        <li><a class="mail" onclick="MAIL()" id="mail">Mail</a></li>
         <li style="opacity: 0;"><a href="tel:VOTRE_NUMERO_DE_TELEPHONE">VOTRE_NUMERO_DE_TELEPHONE</a></li>
         <li class="tel">07.83.64.89.09</li>
     </ul>
@@ -104,6 +113,10 @@
 <script>
     function DISC(){
         document.getElementById("discord").innerHTML = "liloptn";
+    }
+    function MAIL(){
+        document.getElementById("mail").innerHTML = "baptistemathon2004@gmail.com";
+        document.getElementById("mail").style.width = "90%"
     }
 </script>
 
